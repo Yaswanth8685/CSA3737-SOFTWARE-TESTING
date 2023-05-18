@@ -1,0 +1,24 @@
+package yaswanth;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class swiggy {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\yaswa\\OneDrive\\Desktop\\software\\Selinium\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.swiggy.com/");
+		WebElement login=driver.findElement(By.className("x4bK8"));
+		System.out.println(login);
+		login.click();
+		WebElement phonenumber=driver.findElement(By.id("_381fS"));
+		System.out.println(phonenumber);
+		phonenumber.sendKeys("6300215331");
+		WebElement Login=driver.findElement(By.className("_25qBi _2-hTu"));
+		System.out.println(login);
+		Login.click();
+
+	}
+
+}
